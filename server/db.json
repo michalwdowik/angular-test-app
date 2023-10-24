@@ -2,16 +2,58 @@
   "courses": [
     {
       "id": 1,
-      "title": "Angular Test 3",
-      "description": "Learn test 3",
+      "title": "Angular Fundamentals",
+      "description": "This course is an in-depth exploration of Angular, covering the latest version. You'll learn about components, services, and routing, along with best practices for testing Angular applications. The course is designed for both beginners and experienced developers looking to enhance their Angular skills.",
       "percentComplete": 88,
       "favorite": true
     },
     {
       "id": 2,
-      "title": "React Fundamentalsggg",
-      "description": "Introduction to React",
+      "title": "React Fundamentals",
+      "description": "Get started with React, the popular JavaScript library for building user interfaces. This course will provide you with a solid foundation in React, covering concepts such as JSX, components, props, and state management. By the end of this course, you'll be well-equipped to create interactive and dynamic web applications using React.",
       "percentComplete": 70,
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "title": "Python Programming Basics",
+      "description": "Learn the fundamentals of Python programming. This course is suitable for beginners and covers topics like variables, data types, control structures, and functions. Python is known for its simplicity and versatility, making it a great choice for both beginners and experienced programmers.",
+      "percentComplete": 45,
+      "favorite": true
+    },
+    {
+      "id": 4,
+      "title": "Machine Learning with Python",
+      "description": "Dive into the world of machine learning using Python. This comprehensive course covers the basics of machine learning, data preprocessing, and various algorithms. You'll also work on real-world projects to apply your knowledge and gain practical experience in the field.",
+      "percentComplete": 60,
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "title": "Web Development with HTML and CSS",
+      "description": "Master the essential building blocks of web development - HTML and CSS. This course is perfect for aspiring web developers and covers the fundamentals of creating web pages, styling them, and ensuring they look great on different devices.",
+      "percentComplete": 78,
+      "favorite": true
+    },
+    {
+      "id": 6,
+      "title": "Java Programming for Beginners",
+      "description": "Start your journey in Java programming. This course is tailored for beginners and will guide you through Java syntax, object-oriented programming, and best coding practices. Java is widely used in enterprise applications and Android app development.",
+      "percentComplete": 30,
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "title": "Data Science Essentials",
+      "description": "Explore the essential concepts of data science. From data analysis and visualization to machine learning and data mining, this course will equip you with the skills needed to work with large datasets and extract valuable insights from them.",
+      "percentComplete": 85,
+      "favorite": true
+    },
+    {
+      "id": 8,
+      "title": "Mobile App Development with Flutter",
+      "description": "Learn to develop mobile apps using Flutter, a popular open-source framework by Google. You'll gain hands-on experience in building cross-platform apps that run on both Android and iOS. This course is ideal for mobile app enthusiasts and developers looking to expand their skill set.",
+      "percentComplete": 55,
       "favorite": false
     }
   ]

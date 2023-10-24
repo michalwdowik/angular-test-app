@@ -1,5 +1,5 @@
 <div class="main-view">
-  <div class="test">
+  <div class="test course-list">
     <app-course-list
       [courses]="courses$ | async"
       (courseSelected)="selectCourse($event)"
@@ -11,7 +11,7 @@
     <app-course-details
       (courseCancelled)="resetCourse()"
       [selectedCourse]="selectedCourse"
-      (courseSubmitted)="submitCourse()"
+      (courseUpdated)="updateCourse($event)"
     ></app-course-details>
   </div>
 </div>

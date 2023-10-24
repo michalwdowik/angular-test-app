@@ -7,15 +7,23 @@ import { Course } from 'src/app/shared/interfaces/course.interface';
   styleUrls: ['./course-details.component.css'],
 })
 export class CourseDetailsComponent {
-  @Input() selectedCourse: Course;
+  @Input() set selectedCourse(value: Course) {
+    if (value?.title) {
+      this.originalTitle = value.title;
+    }
+    this.currentCourse = Object.assign({}, value);
+  }
   @Output() courseCancelled = new EventEmitter();
-  @Output() courseSubmitted = new EventEmitter();
+  @Output() courseUpdated = new EventEmitter();
+
+  currentCourse: Course;
+  originalTitle: string;
 
   cancelCourse() {
     this.courseCancelled.emit();
   }
 
-  submitCourse() {
-    this.courseSubmitted.emit();
+  updateCourse(course: Course) {
+    this.courseUpdated.emit(course);
   }
 }

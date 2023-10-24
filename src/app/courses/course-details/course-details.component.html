@@ -3,7 +3,7 @@
     <mat-card-title>Course: </mat-card-title>
   </mat-card-header>
 
-  <form #form="ngForm">
+  <form #form="ngForm" (submit)="updateCourse(currentCourse)">
     <mat-card-content>
       <mat-form-field class="full-width">
         <mat-label>Title</mat-label>
@@ -12,7 +12,7 @@
           matInput
           required
           placeholder="Type some title..."
-          [(ngModel)]="selectedCourse.title"
+          [(ngModel)]="currentCourse.title"
         />
       </mat-form-field>
 
@@ -21,15 +21,16 @@
         <textarea
           matInput
           required
+          rows="5"
           name="description"
           placeholder="Type some description..."
-          [(ngModel)]="selectedCourse.description"
+          [(ngModel)]="currentCourse.description"
         ></textarea>
       </mat-form-field>
 
       <section>
         <mat-checkbox
-          [(ngModel)]="selectedCourse.favorite"
+          [(ngModel)]="currentCourse.favorite"
           name="favorite"
           class="example-margin"
           color="primary"
@@ -37,12 +38,12 @@
         >
       </section>
       <section mode="buffer">
-        <h4>{{ selectedCourse.percentComplete }}% Complete</h4>
+        <h4>{{ currentCourse.percentComplete }}% Complete</h4>
         <mat-slider class="wider" discrete>
           <input
             name="percentComplete"
             type="range"
-            [(ngModel)]="selectedCourse.percentComplete"
+            [(ngModel)]="currentCourse.percentComplete"
             matSliderThumb
           />
         </mat-slider>
@@ -51,17 +52,17 @@
     <mat-card-actions>
       <button
         [disabled]="form.invalid"
-        (click)="submitCourse()"
+        type="submit"
         mat-raised-button
         color="primary"
       >
-        Submit
+        Save
       </button>
       <button (click)="cancelCourse()" mat-button color="primary">
         Cancel
       </button>
 
-      <pre>{{ form.value | json }}</pre>
+      <!-- <pre>{{ form.value | json }}</pre> -->
     </mat-card-actions>
   </form></mat-card
 >

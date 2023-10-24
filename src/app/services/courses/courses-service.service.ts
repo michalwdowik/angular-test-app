@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Course } from '../shared/interfaces/course.interface';
-import { NotificationService } from './notifications/notification.service';
+import { Course } from '../../shared/interfaces/course.interface';
+import { NotificationService } from '../notifications/notification.service';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -36,5 +35,8 @@ export class CoursesService {
     return this.http.delete(this.getUrlWithID(id));
   }
 
-  addCourse() {}
+  updateCourse(course: Course) {
+    this.notificationService.notify('Update Course HTTP Call');
+    return this.http.put<Course>(this.getUrlWithID(course.id), course);
+  }
 }

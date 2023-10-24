@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { CoursesService } from '../services/courses-service.service';
+import { CoursesService } from '../services/courses/courses-service.service';
 import { Course } from '../shared/interfaces/course.interface';
-
-const emptyCourse: Course = {
-  id: 0,
-  title: '',
-  description: '',
-  percentComplete: 0,
-  favorite: false,
-};
 
 @Component({
   selector: 'app-courses',
@@ -18,7 +10,7 @@ const emptyCourse: Course = {
 })
 export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
-  selectedCourse: Course = emptyCourse;
+  selectedCourse: Course;
 
   constructor(private coursesService: CoursesService) {}
 
@@ -42,10 +34,22 @@ export class CoursesComponent implements OnInit {
   }
 
   resetCourse() {
+    const emptyCourse: Course = {
+      id: 0,
+      title: '',
+      description: '',
+      percentComplete: 0,
+      favorite: false,
+    };
     this.selectCourse(emptyCourse);
   }
 
-  submitCourse() {
-    console.log('Course Submitted');
+  updateCourse(course: Course) {
+    this.coursesService
+      .updateCourse(course)
+      .pipe(tap(() => this.loadCourses(false)))
+      .subscribe();
+
+    this.resetCourse();
   }
 }
