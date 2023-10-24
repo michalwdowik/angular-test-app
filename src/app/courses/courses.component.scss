@@ -1,11 +1,16 @@
 .main-view {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4rem;
   margin: 2rem;
 }
 
-.test {
-  width: 100%;
-  max-width: 500px;
+.wide {
+  flex: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .main-view {
+    flex-direction: column;
+  }
 }
