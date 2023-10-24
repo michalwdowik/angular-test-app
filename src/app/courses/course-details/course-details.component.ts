@@ -19,6 +19,7 @@ export class CourseDetailsComponent implements OnInit {
   originalTitle: string;
   currentCourse: Course;
 
+  backgroundColor: 'red';
   constructor() {}
 
   ngOnInit(): void {}
