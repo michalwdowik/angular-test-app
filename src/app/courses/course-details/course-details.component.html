@@ -1,6 +1,11 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Course: </mat-card-title>
+    <mat-card-title *ngIf="currentCourse.id; else elseBlock">{{
+      originalTitle | titlecase
+    }}</mat-card-title>
+    <ng-template #elseBlock>
+      <mat-card-title>Select course:</mat-card-title>
+    </ng-template>
   </mat-card-header>
 
   <form #form="ngForm" (submit)="updateCourse(currentCourse)">
