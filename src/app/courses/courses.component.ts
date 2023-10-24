@@ -16,14 +16,38 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadCourses(true);
+    this.resetCourse();
+  }
+
+  selectCourse(course: Course) {
+    this.selectedCourse = course;
   }
 
   loadCourses(displayNotification: boolean) {
     this.courses$ = this.coursesService.getAllCourses(displayNotification);
   }
 
-  selectCourse(course: Course) {
-    this.selectedCourse = course;
+  saveCourse(course: Course) {
+    if (course.id) {
+      this.updateCourse(course);
+    } else {
+      this.createCourse(course);
+    }
+    this.resetCourse();
+  }
+
+  updateCourse(course: Course) {
+    this.coursesService
+      .updateCourse(course)
+      .pipe(tap(() => this.loadCourses(false)))
+      .subscribe();
+  }
+
+  createCourse(course: Course) {
+    this.coursesService
+      .createCourse(course)
+      .pipe(tap(() => this.loadCourses(false)))
+      .subscribe();
   }
 
   deleteCourse(id: number) {
@@ -35,21 +59,12 @@ export class CoursesComponent implements OnInit {
 
   resetCourse() {
     const emptyCourse: Course = {
-      id: 0,
+      id: null,
       title: '',
       description: '',
       percentComplete: 0,
       favorite: false,
     };
     this.selectCourse(emptyCourse);
-  }
-
-  updateCourse(course: Course) {
-    this.coursesService
-      .updateCourse(course)
-      .pipe(tap(() => this.loadCourses(false)))
-      .subscribe();
-
-    this.resetCourse();
   }
 }

@@ -9,9 +9,9 @@
 
   <div class="test">
     <app-course-details
-      (courseCancelled)="resetCourse()"
       [selectedCourse]="selectedCourse"
-      (courseUpdated)="updateCourse($event)"
+      (courseSaved)="saveCourse($event)"
+      (courseCancelled)="resetCourse()"
     ></app-course-details>
   </div>
 </div>

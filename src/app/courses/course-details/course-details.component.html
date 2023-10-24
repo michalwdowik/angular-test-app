@@ -8,7 +8,7 @@
     </ng-template>
   </mat-card-header>
 
-  <form #form="ngForm" (submit)="updateCourse(currentCourse)">
+  <form #form="ngForm" (submit)="saveCourse(currentCourse)">
     <mat-card-content>
       <mat-form-field class="full-width">
         <mat-label>Title</mat-label>
@@ -63,11 +63,9 @@
       >
         Save
       </button>
-      <button (click)="cancelCourse()" mat-button color="primary">
+      <button type="button" (click)="form.reset()" mat-button color="primary">
         Cancel
       </button>
-
-      <!-- <pre>{{ form.value | json }}</pre> -->
     </mat-card-actions>
   </form></mat-card
 >

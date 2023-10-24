@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Course } from '../../shared/interfaces/course.interface';
+import { Course } from 'src/app/shared/interfaces/course.interface';
 import { NotificationService } from '../notifications/notification.service';
 
 const BASE_URL = 'http://localhost:3000';
@@ -15,14 +15,6 @@ export class CoursesService {
     private notificationService: NotificationService
   ) {}
 
-  getUrl() {
-    return `${BASE_URL}/${this.model}`;
-  }
-
-  private getUrlWithID(id: number) {
-    return `${this.getUrl()}/${id}`;
-  }
-
   getAllCourses(displayNotification: boolean) {
     if (displayNotification) {
       this.notificationService.notify('Get All Courses HTTP Call');
@@ -30,13 +22,26 @@ export class CoursesService {
     return this.http.get<Course[]>(this.getUrl());
   }
 
-  deleteCourse(id: number) {
-    this.notificationService.notify('Delete Course HTTP Call');
-    return this.http.delete(this.getUrlWithID(id));
+  createCourse(course: Course) {
+    this.notificationService.notify('Create Course HTTP Call');
+    return this.http.post<Course>(this.getUrl(), course);
   }
 
   updateCourse(course: Course) {
     this.notificationService.notify('Update Course HTTP Call');
     return this.http.put<Course>(this.getUrlWithID(course.id), course);
+  }
+
+  deleteCourse(id: number) {
+    this.notificationService.notify('Delete Course HTTP Call');
+    return this.http.delete(this.getUrlWithID(id));
+  }
+
+  private getUrl() {
+    return `${BASE_URL}/${this.model}`;
+  }
+
+  private getUrlWithID(id) {
+    return `${this.getUrl()}/${id}`;
   }
 }

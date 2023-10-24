@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title": "Angular Fundamentals",
-      "description": "This course is an in-depth exploration of Angular, covering the latest version. You'll learn about components, services, and routing, along with best practices for testing Angular applications. The course is designed for both beginners and experienced developers looking to enhance their Angular skills.",
-      "percentComplete": 88,
+      "description": "This course is an in-depth exploration of Angular, covering the latest version. You'll learn about components, services, and routing, along with best practices for testing Angular applications. The course is designed for both beginners and experienced developers looking to enhance their Angular skills.\n",
+      "percentComplete": 18,
       "favorite": true
     },
     {
@@ -48,13 +48,6 @@
       "description": "Explore the essential concepts of data science. From data analysis and visualization to machine learning and data mining, this course will equip you with the skills needed to work with large datasets and extract valuable insights from them.",
       "percentComplete": 85,
       "favorite": true
-    },
-    {
-      "id": 8,
-      "title": "Mobile App Development with Flutter",
-      "description": "Learn to develop mobile apps using Flutter, a popular open-source framework by Google. You'll gain hands-on experience in building cross-platform apps that run on both Android and iOS. This course is ideal for mobile app enthusiasts and developers looking to expand their skill set.",
-      "percentComplete": 55,
-      "favorite": false
     }
   ]
 }
