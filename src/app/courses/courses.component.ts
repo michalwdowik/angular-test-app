@@ -23,11 +23,11 @@ export class CoursesComponent implements OnInit {
   constructor(private coursesService: CoursesService) {}
 
   ngOnInit(): void {
-    this.loadCourses();
+    this.loadCourses(true);
   }
 
-  loadCourses(): void {
-    this.courses$ = this.coursesService.getAllCourses();
+  loadCourses(displayNotification: boolean) {
+    this.courses$ = this.coursesService.getAllCourses(displayNotification);
   }
 
   selectCourse(course: Course) {
@@ -37,7 +37,7 @@ export class CoursesComponent implements OnInit {
   deleteCourse(id: number) {
     this.coursesService
       .deleteCourse(id)
-      .pipe(tap(() => this.loadCourses()))
+      .pipe(tap(() => this.loadCourses(false)))
       .subscribe();
   }
 

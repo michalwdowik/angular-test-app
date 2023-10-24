@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Course } from '../shared/interfaces/course.interface';
+import { NotificationService } from './notifications/notification.service';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -10,7 +11,10 @@ const BASE_URL = 'http://localhost:3000';
 })
 export class CoursesService {
   model = 'courses';
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private notificationService: NotificationService
+  ) {}
 
   getUrl() {
     return `${BASE_URL}/${this.model}`;
@@ -20,11 +24,15 @@ export class CoursesService {
     return `${this.getUrl()}/${id}`;
   }
 
-  getAllCourses(): Observable<Course[]> {
+  getAllCourses(displayNotification: boolean) {
+    if (displayNotification) {
+      this.notificationService.notify('Get All Courses HTTP Call');
+    }
     return this.http.get<Course[]>(this.getUrl());
   }
 
   deleteCourse(id: number) {
+    this.notificationService.notify('Delete Course HTTP Call');
     return this.http.delete(this.getUrlWithID(id));
   }
 

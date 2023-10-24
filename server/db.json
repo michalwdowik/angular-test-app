@@ -13,13 +13,6 @@
       "description": "Introduction to React",
       "percentComplete": 70,
       "favorite": false
-    },
-    {
-      "id": 3,
-      "title": "Vue.js Mastery",
-      "description": "Mastering Vue.js framework",
-      "percentComplete": 22,
-      "favorite": true
     }
   ]
 }
