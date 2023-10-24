@@ -1,0 +1,22 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(38, 151, 226);
+  color: white;
+}
+
+.toolbar-section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+}
