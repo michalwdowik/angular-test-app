@@ -1,7 +1,7 @@
 .toolbar {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(38, 151, 226);
+  /* background-color: rgb(38, 151, 226); */
   color: white;
 }
 

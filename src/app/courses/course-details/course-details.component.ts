@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from 'src/app/shared/interfaces/course.interface';
-
+import { ThemeService } from 'src/app/services/theme/theme.service';
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
@@ -20,7 +20,15 @@ export class CourseDetailsComponent implements OnInit {
   currentCourse: Course;
 
   backgroundColor: 'red';
-  constructor() {}
+  constructor(private themeService: ThemeService) {}
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
+  }
+
+  isDarkTheme() {
+    return this.themeService.isDark();
+  }
 
   ngOnInit(): void {}
 
