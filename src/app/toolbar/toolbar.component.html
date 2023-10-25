@@ -3,6 +3,7 @@
     <button
       mat-icon-button
       class="example-icon"
+      (click)="onToggleSidenav()"
       aria-label="Example icon-button with menu icon"
     >
       <mat-icon>menu</mat-icon>
@@ -24,3 +25,7 @@
     >
   </div>
 </mat-toolbar>
+<app-drawer
+  (drawerToggled)="onToggleSidenav()"
+  *ngIf="showSidenav"
+></app-drawer>

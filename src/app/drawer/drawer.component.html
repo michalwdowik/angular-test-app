@@ -1,0 +1,16 @@
+<div class="drawer">
+  <a
+    mat-button
+    class="nav-link"
+    *ngFor="let link of links"
+    (click)="toggleDrawer()"
+    [routerLink]="link.path"
+    routerLinkActive="active"
+  >
+    {{ link.title }}
+    <mat-icon>
+      {{ link.icon }}
+    </mat-icon>
+  </a>
+</div>
+<div (click)="toggleDrawer()" class="drawer-overlay"></div>

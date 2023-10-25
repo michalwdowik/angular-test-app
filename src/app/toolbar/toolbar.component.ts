@@ -9,7 +9,13 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 export class ToolbarComponent {
   @Output() readonly darkModeSwitched = new EventEmitter<boolean>();
 
+  showSidenav = false;
+
   onDarkModeSwitched({ checked }: MatSlideToggleChange) {
     this.darkModeSwitched.emit(checked);
+  }
+
+  onToggleSidenav() {
+    this.showSidenav = !this.showSidenav;
   }
 }
