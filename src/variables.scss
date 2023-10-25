@@ -1,0 +1,5 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$primary: mat.define-palette(mat.$blue-palette);
+$warn: mat.define-palette(mat.$red-palette);

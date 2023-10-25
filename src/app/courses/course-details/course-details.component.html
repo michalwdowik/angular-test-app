@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-header>
+  <mat-card-header class="dark-theme">
     <mat-card-title *ngIf="currentCourse.id; else elseBlock">{{
       originalTitle | titlecase
     }}</mat-card-title>
@@ -43,7 +43,7 @@
         >
       </section>
       <section mode="buffer">
-        <h4>{{ currentCourse.percentComplete }}% Complete</h4>
+        <p>{{ currentCourse.percentComplete }}% Complete</p>
         <mat-slider class="wider" discrete>
           <input
             name="percentComplete"

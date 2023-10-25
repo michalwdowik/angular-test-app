@@ -1,17 +1,15 @@
 @use "@angular/material" as mat;
 @include mat.core();
+@import "variables.scss";
 
 .lightTheme {
-  $light-primary: mat.define-palette(mat.$blue-palette);
-  $light-accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
-  $light-warn: mat.define-palette(mat.$red-palette);
-
+  $light-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
   $light-theme: mat.define-light-theme(
     (
       color: (
-        primary: $light-primary,
+        primary: $primary,
         accent: $light-accent,
-        warn: $light-warn,
+        warn: $warn,
       ),
     )
   );
@@ -20,15 +18,13 @@
 }
 
 .darkTheme {
-  $dark-primary: mat.define-palette(mat.$blue-palette);
-  $dark-accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
-  $dark-warn: mat.define-palette(mat.$red-palette);
+  $dark-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
   $dark-theme: mat.define-dark-theme(
     (
       color: (
-        primary: $dark-primary,
+        primary: $primary,
         accent: $dark-accent,
-        warn: $dark-warn,
+        warn: $warn,
       ),
     )
   );
@@ -68,9 +64,15 @@ mat-list-item {
 
 mat-list-item:hover {
   cursor: pointer !important;
-  background: whitesmoke;
+  transition: background 0.3s ease;
+  background: rgb(1, 162, 255);
 }
 
 mat-list-item:not(:first-of-type) {
   border-top: 1px solid #efefef;
+}
+
+mat-card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
