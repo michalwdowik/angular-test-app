@@ -1,6 +1,6 @@
 .drawer {
   width: 20%;
-  height: 100%;
+  height: calc(100% - 64px);
   z-index: 3;
   position: absolute;
   background: rgba(214, 202, 202, 0.1);
@@ -19,13 +19,22 @@
 .nav-link {
   text-decoration: none;
   font-size: 1.5rem;
+  width: 100%;
+}
+
+a {
+  transition: color 0.3 ease;
+  color: inherit; /* Inherit the color from the parent element (usually black or blue) */
+}
+a:hover {
+  color: rgb(37, 131, 238);
 }
 
 .drawer-overlay {
   background-color: black;
   opacity: 0.5;
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: calc(100% - 64px);
   position: absolute;
   z-index: 2;
   margin-left: 20%;
