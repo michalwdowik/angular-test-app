@@ -14,7 +14,7 @@ import { NotificationService } from './services/notifications/notification.servi
 import { DrawerComponent } from './drawer/drawer.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { LazyComponent } from './lazy/lazy.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,6 @@ import { LazyComponent } from './lazy/lazy.component';
     CourseDetailsComponent,
     DrawerComponent,
     HomeComponent,
-    LazyComponent,
   ],
   imports: [
     BrowserModule,
