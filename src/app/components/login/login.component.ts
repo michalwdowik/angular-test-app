@@ -8,9 +8,9 @@ import { LoginService } from 'src/app/shared/services/login/login.service';
 export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService) {}
 
-  showProtectedContent = this.loginService.protectedEnabled;
+  enableProtectedRoute = this.loginService.enableProtectedRoute;
 
-  triggerToggleAccess() {
+  toggleAccess() {
     this.loginService.toggleAccess();
   }
 

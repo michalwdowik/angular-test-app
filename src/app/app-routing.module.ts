@@ -3,15 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoursesComponent } from './components/courses/courses.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { PremiumComponent } from './components/premium/premium.component';
+import { ProtectedComponent } from './components/protected/protected.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
   {
-    path: 'premium',
-    component: PremiumComponent,
+    path: 'protected',
+    component: ProtectedComponent,
     canActivate: [AuthGuard], // Apply the AuthGuard to the premium route
   },
   { path: 'login', component: LoginComponent },

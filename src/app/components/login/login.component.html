@@ -1,12 +1,12 @@
 <div class="login-page">
-  <h1>Protected Content {{ showProtectedContent ? "enabled" : "locked" }}</h1>
+  <h1>Protected Content {{ enableProtectedRoute ? "enabled" : "locked" }}</h1>
   <mat-slide-toggle
-    [(ngModel)]="showProtectedContent"
-    (change)="triggerToggleAccess()"
+    [(ngModel)]="enableProtectedRoute"
+    (change)="toggleAccess()"
   ></mat-slide-toggle>
   <button
-    [routerLink]="'/premium'"
-    [disabled]="!showProtectedContent"
+    [routerLink]="'/protected'"
+    [disabled]="!enableProtectedRoute"
     mat-raised-button
     color="accent"
   >

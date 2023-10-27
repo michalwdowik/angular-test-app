@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoginService {
-  protectedEnabled: boolean = false;
+  enableProtectedRoute: boolean = false;
   constructor() {}
 
   toggleAccess() {
-    this.protectedEnabled = !this.protectedEnabled;
+    this.enableProtectedRoute = !this.enableProtectedRoute;
   }
 }

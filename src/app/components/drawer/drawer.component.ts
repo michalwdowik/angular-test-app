@@ -17,6 +17,6 @@ export class DrawerComponent {
     { path: 'courses', icon: 'books', title: 'Courses' },
     { path: 'login', icon: 'vpn_key', title: 'Login' },
     { path: 'lazy', icon: 'cached', title: 'Lazy loading' },
-    { path: 'premium', icon: 'locked', title: 'Premium' },
+    { path: 'protected', icon: 'locked', title: 'Protected' },
   ];
 }

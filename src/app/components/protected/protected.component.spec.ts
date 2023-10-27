@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PremiumComponent } from './premium.component';
+import { ProtectedComponent } from './protected.component';
 
 describe('PremiumComponent', () => {
-  let component: PremiumComponent;
-  let fixture: ComponentFixture<PremiumComponent>;
+  let component: ProtectedComponent;
+  let fixture: ComponentFixture<ProtectedComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PremiumComponent]
+      declarations: [ProtectedComponent],
     });
-    fixture = TestBed.createComponent(PremiumComponent);
+    fixture = TestBed.createComponent(ProtectedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
