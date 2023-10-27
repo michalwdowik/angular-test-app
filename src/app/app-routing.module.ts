@@ -9,7 +9,11 @@ import { AuthGuard } from './shared/guards/auth.guard';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
-  { path: 'premium', component: PremiumComponent, canActivate: [AuthGuard] },
+  {
+    path: 'premium',
+    component: PremiumComponent,
+    canActivate: [AuthGuard], // Apply the AuthGuard to the premium route
+  },
   { path: 'login', component: LoginComponent },
   {
     path: 'lazy',

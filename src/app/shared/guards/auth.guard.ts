@@ -8,14 +8,12 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-
-import { AuthService } from '../services/auth/auth.service';
-
+import { LoginService } from '../services/login/login.service';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -25,14 +23,6 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return this.authService.isAuthenticated$.pipe(
-      tap((isAuthenticated) => {
-        if (!isAuthenticated) {
-          this.router.navigateByUrl('/login');
-        }
-
-        return isAuthenticated;
-      })
-    );
+    return this.loginService.protectedEnabled;
   }
 }

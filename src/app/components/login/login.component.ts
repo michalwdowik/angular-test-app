@@ -1,24 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-
-import { UserInfo } from '../../shared/interfaces/auth.interface';
-import { AuthService } from '../../shared/services/auth/auth.service';
-
+import { LoginService } from 'src/app/shared/services/login/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  userInfo: UserInfo = {
-    email: '',
-    password: '',
-  };
+  constructor(private loginService: LoginService) {}
 
-  constructor(private authService: AuthService) {}
+  showProtectedContent = this.loginService.protectedEnabled;
+
+  triggerToggleAccess() {
+    this.loginService.toggleAccess();
+  }
 
   ngOnInit(): void {}
-
-  login(userInfo: UserInfo) {
-    this.authService.login(userInfo);
-  }
 }

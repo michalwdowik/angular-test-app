@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from 'src/app/shared/interfaces/course.interface';
-import { ThemeService } from 'src/app/services/theme/theme.service';
+import { ThemeService } from 'src/app/shared/services/theme/theme.service';
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
