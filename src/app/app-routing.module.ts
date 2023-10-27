@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursesComponent } from './courses/courses.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { PremiumComponent } from './premium/premium.component';
-import { AuthGuard } from './guards/auth.guard';
+import { CoursesComponent } from './components/courses/courses.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { PremiumComponent } from './components/premium/premium.component';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'lazy',
-    loadChildren: () => import('./lazy/lazy.module').then((m) => m.LazyModule),
+    loadChildren: () =>
+      import('./components/lazy/lazy.module').then((m) => m.LazyModule),
   },
   { path: '**', redirectTo: '/home' },
 ];

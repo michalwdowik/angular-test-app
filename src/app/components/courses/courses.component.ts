@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { CoursesService } from '../services/courses/courses-service.service';
-import { Course } from '../shared/interfaces/course.interface';
+import { CoursesService } from '../../shared/services/courses/courses-service.service';
+import { Course } from '../../shared/interfaces/course.interface';
 
 @Component({
   selector: 'app-courses',
