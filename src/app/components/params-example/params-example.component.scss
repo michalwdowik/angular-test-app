@@ -1,0 +1,27 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  margin: 4rem;
+}
+
+.lessons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.lesson {
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.lesson:hover {
+  opacity: 0.8;
+}
+
+.call-to-action {
+  color: red;
+}

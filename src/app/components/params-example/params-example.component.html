@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="lessons-container">
+    <h1>Lessons:</h1>
+    <div *ngFor="let lesson of lessons">
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="selectLesson(lesson)"
+        [routerLink]="['/lessons', lesson.name.toLowerCase().replace(' ', '-')]"
+      >
+        {{ lesson.name }}
+      </button>
+    </div>
+  </div>
+  <app-lesson
+    [selectedLesson]="selectedLesson"
+    *ngIf="selectedLesson; else noLesson"
+  ></app-lesson>
+  <ng-template #noLesson>
+    <h1 class="call-to-action">Select some lesson</h1>
+  </ng-template>
+</div>

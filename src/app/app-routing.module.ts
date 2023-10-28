@@ -8,6 +8,7 @@ import { AuthGuard } from './shared/guards/auth.guard';
 import { ChildComponent } from './components/child/child.component';
 import { Course1Component } from './components/child/course1/course1.component';
 import { Course2Component } from './components/child/course2/course2.component';
+import { ParamsExampleComponent } from './components/params-example/params-example.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -30,6 +31,14 @@ const routes: Routes = [
       { path: 'course1', component: Course1Component },
       { path: 'course2', component: Course2Component },
     ],
+  },
+  {
+    path: 'lessons',
+    component: ParamsExampleComponent,
+  },
+  {
+    path: 'lessons/:name',
+    component: ParamsExampleComponent,
   },
   { path: '**', redirectTo: '/home' },
 ];

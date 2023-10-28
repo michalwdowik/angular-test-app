@@ -3,3 +3,8 @@
 
 $primary: mat.define-palette(mat.$blue-palette);
 $warn: mat.define-palette(mat.$red-palette);
+
+// :root {
+//   --primary: mat.define-palette(mat.$blue-palette);
+//   --warn: mat.define-palette(mat.$red-palette);
+// }
