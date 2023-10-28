@@ -1,0 +1,18 @@
+<div class="child">
+  <h1>I'm a children component!</h1>
+  <button
+    mat-raised-button
+    color="primary"
+    [routerLink]="['/child/', 'course1']"
+  >
+    Go to course 1
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    [routerLink]="['/child/', 'course2']"
+  >
+    Go to course 2
+  </button>
+  <router-outlet></router-outlet>
+</div>

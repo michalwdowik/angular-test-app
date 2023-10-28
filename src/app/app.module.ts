@@ -14,6 +14,9 @@ import { NotificationService } from './shared/services/notifications/notificatio
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { ChildComponent } from './components/child/child.component';
+import { Course1Component } from './components/child/course1/course1.component';
+import { Course2Component } from './components/child/course2/course2.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { HomeComponent } from './components/home/home.component';
     CourseDetailsComponent,
     DrawerComponent,
     HomeComponent,
+    ChildComponent,
+    Course1Component,
+    Course2Component,
   ],
   imports: [
     BrowserModule,
