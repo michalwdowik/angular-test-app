@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,12 +18,11 @@ import { Course1Component } from './components/child/course1/course1.component';
 import { Course2Component } from './components/child/course2/course2.component';
 import { ParamsExampleComponent } from './components/params-example/params-example.component';
 import { LessonComponent } from './components/params-example/lesson/lesson.component';
-
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ToolbarComponent,
     CoursesComponent,
     CourseListComponent,
     CourseDetailsComponent,
@@ -35,6 +33,7 @@ import { LessonComponent } from './components/params-example/lesson/lesson.compo
     Course2Component,
     ParamsExampleComponent,
     LessonComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

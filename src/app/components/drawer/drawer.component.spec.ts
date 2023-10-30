@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DrawerComponent } from './drawer.component';
 
 describe('DrawerComponent', () => {
@@ -8,7 +7,7 @@ describe('DrawerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DrawerComponent]
+      declarations: [DrawerComponent],
     });
     fixture = TestBed.createComponent(DrawerComponent);
     component = fixture.componentInstance;

@@ -7,6 +7,8 @@ import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title = 'Angular Test App';
+
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2
