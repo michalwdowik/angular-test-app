@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
 
+![image](https://github.com/michalwdowik/angular-test-app/assets/57302276/fdd8004e-a88f-4a96-af7f-1d339f52737b)
+
 
 ## Description
 This application teaches how to use basic Angular structures and features.
