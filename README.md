@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![image](https://github.com/michalwdowik/angular-test-app/assets/57302276/fdd8004e-a88f-4a96-af7f-1d339f52737b)
 
+## 🚀 Live Demo
+[Firebase Demo](https://angular-test-app-678c6.web.app)
 
 ## Description
 This application teaches how to use basic Angular structures and features.
