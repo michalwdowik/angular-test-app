@@ -70,11 +70,13 @@ export class ParamsExampleComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      this.selectedLesson = this.lessons.find(
-        (lesson) =>
-          lesson.name.toLowerCase().replace(' ', '-') === params.get('name')
-      );
-    });
+    if (this.route && this.route.paramMap) {
+      this.route.paramMap.subscribe((params) => {
+        this.selectedLesson = this.lessons.find(
+          (lesson) =>
+            lesson.name.toLowerCase().replace(' ', '-') === params.get('name')
+        );
+      });
+    }
   }
 }

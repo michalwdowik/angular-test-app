@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from 'src/app/shared/interfaces/course.interface';
 import { ThemeService } from 'src/app/shared/services/theme/theme.service';
+
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
@@ -19,7 +20,7 @@ export class CourseDetailsComponent implements OnInit {
   originalTitle: string;
   currentCourse: Course;
 
-  backgroundColor: 'red';
+  backgroundColor = 'red';
   constructor(private themeService: ThemeService) {}
 
   toggleTheme() {
@@ -30,7 +31,15 @@ export class CourseDetailsComponent implements OnInit {
     return this.themeService.isDark();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentCourse = {
+      title: '',
+      id: null,
+      description: '',
+      favorite: false,
+      percentComplete: 0,
+    };
+  }
 
   saveCourse(course: Course) {
     this.courseSaved.emit(course);
