@@ -1,8 +1,8 @@
 <mat-card>
   <mat-card-header class="dark-theme">
-    <!-- <mat-card-title *ngIf="currentCourse?.title; else elseBlock">{{
+    <mat-card-title *ngIf="currentCourse?.title; else elseBlock">{{
       originalTitle | titlecase
-    }}</mat-card-title> -->
+    }}</mat-card-title>
     <ng-template #elseBlock>
       <mat-card-title>Select course:</mat-card-title>
     </ng-template>
