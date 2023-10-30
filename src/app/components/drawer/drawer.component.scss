@@ -24,10 +24,10 @@
 
 a {
   transition: color 0.3 ease;
-  color: inherit; /* Inherit the color from the parent element (usually black or blue) */
+  color: inherit;
 }
 a:hover {
-  color: rgb(37, 131, 238);
+  color: rgb(37, 131, 238) !important;
 }
 
 .drawer-overlay {
@@ -39,4 +39,12 @@ a:hover {
   z-index: 2;
   margin-left: 20%;
   cursor: pointer;
+}
+
+.black {
+  color: #222 !important;
+}
+
+.white {
+  color: #fff !important;
 }

@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ThemeService } from 'src/app/shared/services/theme/theme.service';
 
 @Component({
   selector: 'app-drawer',
@@ -6,6 +7,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./drawer.component.scss'],
 })
 export class DrawerComponent {
+  constructor(private themeService: ThemeService) {}
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
+  }
+
+  isDarkTheme() {
+    return this.themeService.isDarkTheme();
+  }
+
   @Input() showDrawer: boolean;
   @Output() drawerToggled = new EventEmitter();
 

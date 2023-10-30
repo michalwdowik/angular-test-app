@@ -5,6 +5,8 @@
     *ngFor="let link of links"
     (click)="toggleDrawer()"
     [routerLink]="link.path"
+    [class.black]="!isDarkTheme()"
+    [class.white]="isDarkTheme()"
     routerLinkActive="active"
   >
     {{ link.title }}
