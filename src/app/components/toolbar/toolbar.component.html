@@ -20,9 +20,7 @@
     >
       <mat-icon color="background">favorite</mat-icon>
     </button>
-    <mat-slide-toggle (change)="onDarkModeSwitched($event)"
-      >Mode</mat-slide-toggle
-    >
+    <mat-slide-toggle (change)="toggleTheme()">Mode</mat-slide-toggle>
   </div>
 </mat-toolbar>
 <app-drawer

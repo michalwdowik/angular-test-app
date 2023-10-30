@@ -4,7 +4,7 @@
     <div *ngFor="let lesson of lessons">
       <button
         mat-raised-button
-        color="accent"
+        class="button-bg"
         (click)="selectLesson(lesson)"
         [routerLink]="['/lessons', lesson.name.toLowerCase().replace(' ', '-')]"
       >

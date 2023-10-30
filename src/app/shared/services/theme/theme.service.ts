@@ -1,17 +1,30 @@
-// theme.service.ts
-import { Injectable } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  private isDarkTheme = false;
+  private currentTheme: 'light' | 'dark' = 'light';
+  private renderer: Renderer2;
 
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
+  constructor(rendererFactory: RendererFactory2) {
+    this.renderer = rendererFactory.createRenderer(null, null);
   }
 
-  isDark() {
-    return this.isDarkTheme;
+  toggleTheme() {
+    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.updateTheme();
+  }
+
+  isDarkTheme() {
+    return this.currentTheme === 'dark';
+  }
+
+  private updateTheme() {
+    if (this.currentTheme === 'dark') {
+      this.renderer.addClass(document.body, 'dark-theme');
+    } else {
+      this.renderer.removeClass(document.body, 'dark-theme');
+    }
   }
 }

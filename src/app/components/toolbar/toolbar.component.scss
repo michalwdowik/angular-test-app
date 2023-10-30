@@ -1,7 +1,9 @@
+@import "../../../variables";
+
 .toolbar {
   display: flex;
   justify-content: space-between;
-  background-color: #0195ff;
+  background-color: $main-color;
   color: white;
 }
 

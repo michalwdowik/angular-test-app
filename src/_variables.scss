@@ -1,10 +1,17 @@
 @use "@angular/material" as mat;
+
 @include mat.core();
+
+$main-color: #0195ff;
+$warn: #da7400;
+
+// Light theme
+$bg-theme-light: #fff;
+$color-theme-light: #222;
+
+// Dark theme
+$bg-theme-dark: #222;
+$color-theme-dark: #fff;
 
 $primary: mat.define-palette(mat.$blue-palette);
 $warn: mat.define-palette(mat.$red-palette);
-
-// :root {
-//   --primary: mat.define-palette(mat.$blue-palette);
-//   --warn: mat.define-palette(mat.$red-palette);
-// }

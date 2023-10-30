@@ -20,7 +20,6 @@ export class CourseDetailsComponent implements OnInit {
   originalTitle: string;
   currentCourse: Course;
 
-  backgroundColor = 'red';
   constructor(private themeService: ThemeService) {}
 
   toggleTheme() {
@@ -28,7 +27,7 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   isDarkTheme() {
-    return this.themeService.isDark();
+    return this.themeService.isDarkTheme();
   }
 
   ngOnInit(): void {

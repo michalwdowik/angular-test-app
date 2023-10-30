@@ -2,6 +2,16 @@
 @include mat.core();
 @import "variables";
 
+.light-theme {
+  background-color: $bg-theme-light;
+  color: $color-theme-light;
+}
+
+.dark-theme {
+  background-color: $bg-theme-dark;
+  color: $color-theme-dark;
+}
+
 .lightTheme {
   $light-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
   $light-theme: mat.define-light-theme(
@@ -45,7 +55,6 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: rgb(236, 236, 236);
 }
 
 .full-width {
@@ -66,7 +75,7 @@ mat-list-item {
 mat-list-item:hover {
   cursor: pointer !important;
   transition: background 0.3s ease;
-  background: rgb(1, 162, 255);
+  background: $main-color;
 }
 
 mat-list-item:not(:first-of-type) {
@@ -76,4 +85,8 @@ mat-list-item:not(:first-of-type) {
 mat-card-header {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+mat-card-title {
+  color: #222;
 }

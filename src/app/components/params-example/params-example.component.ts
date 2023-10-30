@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Lesson } from 'src/app/shared/interfaces/lesson';
+import { ThemeService } from 'src/app/shared/services/theme/theme.service';
 
 @Component({
   selector: 'app-params-example',
@@ -67,7 +68,10 @@ export class ParamsExampleComponent implements OnInit {
     this.selectedLesson = lesson;
   }
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private themeService: ThemeService
+  ) {}
 
   ngOnInit(): void {
     if (this.route && this.route.paramMap) {
@@ -78,5 +82,13 @@ export class ParamsExampleComponent implements OnInit {
         );
       });
     }
+  }
+
+  isDark() {
+    return this.themeService.isDarkTheme();
+  }
+
+  changeColor() {
+    this.themeService.toggleTheme();
   }
 }
