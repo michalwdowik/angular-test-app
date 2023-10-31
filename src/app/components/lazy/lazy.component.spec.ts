@@ -8,7 +8,7 @@ describe('LazyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LazyComponent]
+      declarations: [LazyComponent],
     });
     fixture = TestBed.createComponent(LazyComponent);
     component = fixture.componentInstance;

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { ThemeService } from 'src/app/shared/services/theme/theme.service';
 @Component({
   selector: 'app-toolbar',

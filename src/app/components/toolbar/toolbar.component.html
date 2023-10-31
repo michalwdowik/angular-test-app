@@ -4,11 +4,10 @@
       mat-icon-button
       class="example-icon"
       (click)="onToggleSidenav()"
-      aria-label="Example icon-button with menu icon"
-    >
+      aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <img [routerLink]="'home'" class="logo" src="assets/nsp2.jpg" />
+    <img [routerLink]="'home'" class="logo" src="assets/nsp2.jpg" alt="nsp" />
   </div>
 
   <span class="example-spacer"></span>
@@ -16,8 +15,7 @@
     <button
       mat-icon-button
       class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
+      aria-label="Example icon-button with heart icon">
       <mat-icon color="background">favorite</mat-icon>
     </button>
     <mat-slide-toggle (change)="toggleTheme()">Mode</mat-slide-toggle>
@@ -25,5 +23,4 @@
 </mat-toolbar>
 <app-drawer
   (drawerToggled)="onToggleSidenav()"
-  *ngIf="showSidenav"
-></app-drawer>
+  *ngIf="showSidenav"></app-drawer>

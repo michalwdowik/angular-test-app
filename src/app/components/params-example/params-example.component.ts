@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Lesson } from 'src/app/shared/interfaces/lesson';
 import { ThemeService } from 'src/app/shared/services/theme/theme.service';
 
@@ -75,9 +75,9 @@ export class ParamsExampleComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.route && this.route.paramMap) {
-      this.route.paramMap.subscribe((params) => {
+      this.route.paramMap.subscribe(params => {
         this.selectedLesson = this.lessons.find(
-          (lesson) =>
+          lesson =>
             lesson.name.toLowerCase().replace(' ', '-') === params.get('name')
         );
       });

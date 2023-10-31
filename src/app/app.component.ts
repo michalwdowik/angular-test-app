@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { ThemeService } from './shared/services/theme/theme.service';
 
 @Component({

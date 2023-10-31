@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'lazy',
     loadChildren: () =>
-      import('./components/lazy/lazy.module').then((m) => m.LazyModule),
+      import('./components/lazy/lazy.module').then(m => m.LazyModule),
   },
   {
     path: 'child',

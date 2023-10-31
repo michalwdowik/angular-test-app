@@ -1,3 +1,5 @@
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
 <div class="drawer">
   <a
     mat-button
@@ -7,8 +9,7 @@
     [routerLink]="link.path"
     [class.black]="!isDarkTheme()"
     [class.white]="isDarkTheme()"
-    routerLinkActive="active"
-  >
+    routerLinkActive="active">
     {{ link.title }}
     <mat-icon>
       {{ link.icon }}

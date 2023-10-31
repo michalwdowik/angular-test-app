@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./course1.component.scss'],
 })
 export class Course1Component {
-  title: string = 'Course 1 Fundamentals';
-  description: string = 'Test Description';
-  level: string = 'Easy';
+  title = 'Course 1 Fundamentals';
+  description = 'Test Description';
+  level = 'Easy';
 }
