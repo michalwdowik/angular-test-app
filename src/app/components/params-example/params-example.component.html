@@ -12,11 +12,13 @@
       </button>
     </div>
   </div>
-  <app-lesson
-    [selectedLesson]="selectedLesson"
-    *ngIf="selectedLesson; else noLesson"
-  ></app-lesson>
-  <ng-template #noLesson>
-    <h1 class="call-to-action">Select some lesson</h1>
-  </ng-template>
+  <div class="lesson-details">
+    <app-lesson
+      [selectedLesson]="selectedLesson"
+      *ngIf="selectedLesson; else noLesson"
+    ></app-lesson>
+    <ng-template #noLesson>
+      <h1 class="call-to-action">Select some lesson</h1>
+    </ng-template>
+  </div>
 </div>

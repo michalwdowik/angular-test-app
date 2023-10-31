@@ -9,21 +9,21 @@ import { CoursesService } from 'src/app/shared/services/courses/courses-service.
 describe('CoursesComponent', () => {
   let component: CoursesComponent;
   let fixture: ComponentFixture<CoursesComponent>;
+  let coursesService: jasmine.SpyObj<CoursesService>;
 
-  beforeEach(() => {
+  beforeEach(async () => {
+    coursesService = jasmine.createSpyObj('CoursesService', ['getAllCourses']);
+
     TestBed.configureTestingModule({
       declarations: [CoursesComponent],
-      imports: [HttpClientModule, MatSnackBarModule, BrowserAnimationsModule],
-      providers: [CoursesService, HttpClient],
       schemas: [NO_ERRORS_SCHEMA],
-    });
-
-    fixture = TestBed.createComponent(CoursesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+      providers: [{ provide: CoursesService, useValue: coursesService }],
+    }).compileComponents();
   });
 
-  it('should create', () => {
+  it('should create the component', () => {
+    fixture = TestBed.createComponent(CoursesComponent);
+    component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 });
