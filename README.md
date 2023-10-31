@@ -25,6 +25,12 @@ Topics that are introduced in this application:
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 Also, use `npm start` as an alternative to `ng serve` for starting the development server.
 
+## Linting
+To check your code for linting issues, you can use the following commands:
+
+Run `ng lint` to check for linting issues in your code.
+Run `ng lint:fix` to automatically fix some of the linting issues.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
