@@ -10,7 +10,6 @@ import { CourseListComponent } from './components/courses/course-list/course-lis
 import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
 import { FormsModule } from '@angular/forms';
 import { NotificationService } from './shared/services/notifications/notification.service';
-import { DrawerComponent } from './components/drawer/drawer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ChildComponent } from './components/child/child.component';
@@ -31,7 +30,6 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     CoursesComponent,
     CourseListComponent,
     CourseDetailsComponent,
-    DrawerComponent,
     HomeComponent,
     ChildComponent,
     Course1Component,
