@@ -23,6 +23,7 @@ import {
   ModalComponent,
   ModalDataComponent,
 } from './components/modal/modal.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import {
     FormsModule,
     ModalComponent,
     ModalDataComponent,
+    SidenavComponent,
   ],
   providers: [NotificationService],
   bootstrap: [AppComponent],

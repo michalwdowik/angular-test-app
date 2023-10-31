@@ -1,0 +1,26 @@
+<mat-drawer-container
+  (click)="drawer.close()"
+  class="example-container"
+  autosize
+  [class.hidden]="!drawer.opened">
+  <mat-drawer
+    (click)="$event.stopPropagation()"
+    #drawer
+    class="example-sidenav"
+    mode="side">
+    <div class="routes-container">
+      <a
+        (click)="drawer.close()"
+        mat-button
+        class="nav-link"
+        *ngFor="let link of links"
+        [routerLink]="link.path"
+        routerLinkActive="active">
+        {{ link.title }}
+        <mat-icon>
+          {{ link.icon }}
+        </mat-icon>
+      </a>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>
