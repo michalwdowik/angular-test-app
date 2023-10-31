@@ -18,7 +18,9 @@
       aria-label="Example icon-button with heart icon">
       <mat-icon color="background">favorite</mat-icon>
     </button>
-    <mat-slide-toggle (change)="toggleTheme()">Mode</mat-slide-toggle>
+    <mat-slide-toggle [checked]="isDarkTheme" (change)="toggleTheme()"
+      >Mode</mat-slide-toggle
+    >
   </div>
 </mat-toolbar>
 <app-drawer
