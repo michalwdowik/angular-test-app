@@ -19,6 +19,10 @@ import { Course2Component } from './components/child/course2/course2.component';
 import { ParamsExampleComponent } from './components/params-example/params-example.component';
 import { LessonComponent } from './components/params-example/lesson/lesson.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import {
+  ModalComponent,
+  ModalDataComponent,
+} from './components/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +46,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
+    ModalComponent,
+    ModalDataComponent,
   ],
   providers: [NotificationService],
   bootstrap: [AppComponent],

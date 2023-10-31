@@ -12,15 +12,11 @@
 
   <span class="example-spacer"></span>
   <div class="toolbar-buttons">
-    <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon">
-      <mat-icon color="background">favorite</mat-icon>
-    </button>
-    <mat-slide-toggle [checked]="isDarkTheme" (change)="toggleTheme()"
-      >Mode</mat-slide-toggle
-    >
+    <app-modal></app-modal>
+    <mat-slide-toggle
+      [checked]="isDarkTheme"
+      color="primary"
+      (change)="toggleTheme()"></mat-slide-toggle>
   </div>
 </mat-toolbar>
 <app-drawer

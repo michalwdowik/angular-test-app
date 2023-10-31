@@ -13,14 +13,14 @@ export class ToolbarComponent implements OnInit {
   constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
-    this.isDarkTheme = this.themeService.isDarkTheme(); // Initialize the toggle button state
+    this.isDarkTheme = this.themeService.isDarkTheme();
   }
 
   showSidenav = false;
 
   toggleTheme() {
     this.themeService.toggleTheme();
-    this.isDarkTheme = this.themeService.isDarkTheme(); // Update the toggle button state
+    this.isDarkTheme = this.themeService.isDarkTheme();
   }
 
   onToggleSidenav() {

@@ -1,6 +1,6 @@
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 @include mat.core();
-@import "variables";
+@import 'variables';
 
 .light-theme {
   background-color: $bg-theme-light;
@@ -54,7 +54,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .full-width {
