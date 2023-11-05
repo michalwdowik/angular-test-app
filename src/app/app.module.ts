@@ -23,6 +23,7 @@ import {
   ModalDataComponent,
 } from './components/modal/modal.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ReversePipe } from './shared/pipes/reverse.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     ParamsExampleComponent,
     LessonComponent,
     ToolbarComponent,
+    ReversePipe,
   ],
   imports: [
     BrowserModule,
