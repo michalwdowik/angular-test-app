@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { CoursesService } from '../../shared/services/courses/courses-service.service';
 import { Course } from '../../shared/interfaces/course.interface';
@@ -11,6 +17,8 @@ import { Course } from '../../shared/interfaces/course.interface';
 export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
   selectedCourse: Course;
+  @ViewChildren('.child-item')
+  childDetails: QueryList<ElementRef>;
 
   constructor(private coursesService: CoursesService) {}
 

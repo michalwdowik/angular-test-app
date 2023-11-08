@@ -6,8 +6,10 @@
         mat-raised-button
         class="button-bg"
         (click)="selectLesson(lesson)"
-        [routerLink]="['/lessons', lesson.name.toLowerCase().replace(' ', '-')]"
-      >
+        [routerLink]="[
+          '/lessons',
+          lesson.name.toLowerCase().replace(' ', '-')
+        ]">
         {{ lesson.name }}
       </button>
     </div>
@@ -15,8 +17,7 @@
   <div class="lesson-details">
     <app-lesson
       [selectedLesson]="selectedLesson"
-      *ngIf="selectedLesson; else noLesson"
-    ></app-lesson>
+      *ngIf="selectedLesson; else noLesson"></app-lesson>
     <ng-template #noLesson>
       <h1 class="call-to-action">Select some lesson</h1>
     </ng-template>

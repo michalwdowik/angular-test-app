@@ -17,8 +17,7 @@
           matInput
           required
           placeholder="Type some title..."
-          [(ngModel)]="currentCourse.title"
-        />
+          [(ngModel)]="currentCourse.title" />
       </mat-form-field>
 
       <mat-form-field class="full-width">
@@ -29,8 +28,7 @@
           rows="3"
           name="description"
           placeholder="Type some description..."
-          [(ngModel)]="currentCourse.description"
-        ></textarea>
+          [(ngModel)]="currentCourse.description"></textarea>
       </mat-form-field>
 
       <section>
@@ -49,8 +47,7 @@
             name="percentComplete"
             type="range"
             [(ngModel)]="currentCourse.percentComplete"
-            matSliderThumb
-          />
+            matSliderThumb />
         </mat-slider>
       </section>
     </mat-card-content>
@@ -59,8 +56,7 @@
         [disabled]="form.invalid"
         type="submit"
         mat-raised-button
-        color="primary"
-      >
+        color="primary">
         Save
       </button>
       <button type="button" (click)="form.reset()" mat-button color="primary">

@@ -1,11 +1,17 @@
 <div class="home-page">
-  <h1>Angular Test App</h1>
-  <h3>
+  <h1>{{ 'Angular Test App' | reverse }}</h1>
+  <h3
+    [ngStyle]="{
+      color: isRed ? 'red' : 'black',
+      'font-size': fontSize + 'px'
+    }">
     Description: This application teaches how to use basic Angular structures
     and features.
   </h3>
 
-  <p>Topics that are introduced in this application:</p>
+  <p [ngClass]="{ 'red-style': isRed }">
+    Topics that are introduced in this application:
+  </p>
 
   <ul>
     <li *ngFor="let topic of topics">{{ topic }}</li>

@@ -1,13 +1,6 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Angular Fundamentals",
-      "description": "This course is an in-depth exploration of Angular.",
-      "percentComplete": 18,
-      "favorite": true
-    },
-    {
       "id": 2,
       "title": "React Fundamentals",
       "description": "Get started with React, the popular JavaScript library for building user interfaces.",
@@ -16,7 +9,7 @@
     },
     {
       "id": 3,
-      "title": "Python Programming Basics7",
+      "title": "Python Programming Basics",
       "description": "Learn the fundamentals of Python programming.",
       "percentComplete": 36,
       "favorite": false

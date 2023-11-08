@@ -3,15 +3,12 @@
     <app-course-list
       [courses]="courses$ | async"
       (courseSelected)="selectCourse($event)"
-      (courseDeleted)="deleteCourse($event)"
-    ></app-course-list>
+      (courseDeleted)="deleteCourse($event)"></app-course-list>
   </div>
-
   <div class="wide">
     <app-course-details
       [selectedCourse]="selectedCourse"
       (courseSaved)="saveCourse($event)"
-      (courseCancelled)="resetCourse()"
-    ></app-course-details>
+      (courseCancelled)="resetCourse()"></app-course-details>
   </div>
 </div>

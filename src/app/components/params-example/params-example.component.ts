@@ -74,6 +74,7 @@ export class ParamsExampleComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    //jest to idealne miejsce do inicjalizacji danych w komponencie.
     if (this.route && this.route.paramMap) {
       this.route.paramMap.subscribe(params => {
         this.selectedLesson = this.lessons.find(
